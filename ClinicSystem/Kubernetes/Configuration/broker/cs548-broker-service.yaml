@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cs548mq
+  labels:
+    app: cs548mq
+spec:
+  type: NodePort
+  ports:
+  - name: jms
+    port: 61616
+  - name: http
+    port: 8161
+  selector:
+    app: cs548mq

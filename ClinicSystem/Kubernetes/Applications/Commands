@@ -1,0 +1,39 @@
+kubectl delete -f Configuration/database/cs548-database-deployment.yaml
+docker build -t cs548/database Configuration/database
+kubectl apply -f Configuration/database/cs548-database-deployment.yaml
+
+kubectl delete -f Configuration/broker/cs548-broker-deployment.yaml
+docker build -t cs548/broker Configuration/broker
+kubectl apply -f Configuration/broker/cs548-broker-deployment.yaml
+
+kubectl delete -f Configuration/database/cs548-database-service.yaml
+kubectl apply -f Configuration/database/cs548-database-service.yaml
+
+kubectl delete -f Configuration/broker/cs548-broker-service.yaml
+kubectl apply -f Configuration/broker/cs548-broker-service.yaml
+
+kubectl delete -f Applications/clinic-rest/clinic-rest-deployment.yaml
+docker build -t cs548/rest Applications/clinic-rest
+kubectl apply -f Applications/clinic-rest/clinic-rest-deployment.yaml
+
+kubectl delete -f Applications/clinic-research/clinic-research-deployment.yaml
+docker build -t cs548/research Applications/clinic-research
+kubectl apply -f Applications/clinic-research/clinic-research-deployment.yaml
+
+kubectl delete -f Applications/clinic-billing/clinic-billing-deployment.yaml
+docker build -t cs548/billing Applications/clinic-billing
+kubectl apply -f Applications/clinic-billing/clinic-billing-deployment.yaml
+
+kubectl delete -f Applications/clinic-rest/clinic-rest-service.yaml
+kubectl delete -f Applications/clinic-research/clinic-research-service.yaml
+kubectl delete -f Applications/clinic-billing/clinic-billing-service.yaml
+
+kubectl apply -f Applications/clinic-rest/clinic-rest-service.yaml
+kubectl apply -f Applications/clinic-research/clinic-research-service.yaml
+kubectl apply -f Applications/clinic-billing/clinic-billing-service.yaml
+
+curl -X GET -D headers http://localhost:8080/clinic-rest/resources/provider/3
+
+curl -X POST -D headers -H "Content-Type: application/xml" -d @new-drug-treatment.xml http://localhost:8080/clinic-rest/resources/provider/3/treatments
+
+curl -X POST -D headers -H "Content-Type: application/xml" -d @new-surgery-treatment.xml http://localhost:8080/clinic-rest/resources/provider/4/treatments

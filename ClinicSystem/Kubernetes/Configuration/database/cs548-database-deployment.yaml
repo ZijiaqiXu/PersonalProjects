@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs548db
+  labels:
+    app: cs548db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs548db
+  template:
+    metadata:
+      labels:
+        app: cs548db
+    spec:
+      containers:
+      - name: cs548db
+        image: cs548/database
+        env:
+        - name: POSTGRES_PASSWORD
+          value: z1j1aq1xu
+        - name: DATABASE_PASSWORD
+          value: dom1n1c
+        imagePullPolicy: Never
+      restartPolicy: Always
