@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs548mq
+  labels:
+    app: cs548mq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs548mq
+  template:
+    metadata:
+      labels:
+        app: cs548mq
+    spec: 
+      containers:
+      - name: cs548mq
+        image: cs548/broker
+        imagePullPolicy: Never
+      restartPolicy: Always

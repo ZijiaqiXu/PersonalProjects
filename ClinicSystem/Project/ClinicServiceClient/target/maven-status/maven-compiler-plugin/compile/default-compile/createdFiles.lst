@@ -1,9 +1,0 @@
-edu\stevens\cs548\clinic\service\ejb\IProviderService$ProviderServiceExn.class
-edu\stevens\cs548\clinic\service\ejb\IProviderService$TreatmentNotFoundExn.class
-edu\stevens\cs548\clinic\service\ejb\ClinicDomain.class
-edu\stevens\cs548\clinic\service\ejb\IProviderService$ProviderNotFoundExn.class
-edu\stevens\cs548\clinic\service\ejb\IPatientService$PatientNotFoundExn.class
-edu\stevens\cs548\clinic\service\ejb\IPatientService$PatientServiceExn.class
-edu\stevens\cs548\clinic\service\ejb\IPatientService.class
-edu\stevens\cs548\clinic\service\ejb\IPatientService$TreatmentNotFoundExn.class
-edu\stevens\cs548\clinic\service\ejb\IProviderService.class

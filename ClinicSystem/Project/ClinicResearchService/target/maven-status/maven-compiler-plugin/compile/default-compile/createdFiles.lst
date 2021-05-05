@@ -1,9 +1,0 @@
-edu\stevens\cs548\clinic\research\service\DrugTreatmentDtoFactory.class
-edu\stevens\cs548\clinic\research\domain\ResearchDAO.class
-edu\stevens\cs548\clinic\research\service\ResearchService.class
-edu\stevens\cs548\clinic\research\domain\IResearchFactory.class
-edu\stevens\cs548\clinic\research\service\ClinicResearchProducer.class
-edu\stevens\cs548\clinic\research\domain\IResearchDAO$ResearchExn.class
-edu\stevens\cs548\clinic\research\domain\ResearchFactory.class
-edu\stevens\cs548\clinic\research\domain\IResearchDAO.class
-edu\stevens\cs548\clinic\research\jms\TreatmentListener.class

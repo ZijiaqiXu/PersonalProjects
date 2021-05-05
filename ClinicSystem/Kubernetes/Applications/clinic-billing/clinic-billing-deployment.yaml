@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs548-billing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs548-billing
+  template:
+    metadata:
+      labels:
+        app: cs548-billing
+    spec:
+      containers:
+      - name: cs548-billing
+        image: cs548/billing
+        env:
+        - name: DATABASE_PASSWORD
+          value: dom1n1c
+        - name: MQ_PASSWORD
+          value: q1anyu
+        imagePullPolicy: Never
+      restartPolicy: Always

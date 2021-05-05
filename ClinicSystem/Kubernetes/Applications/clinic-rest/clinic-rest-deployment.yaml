@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs548-rest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs548-rest
+  template:
+    metadata:
+      labels:
+        app: cs548-rest
+    spec:
+      containers:
+      - name: cs548-rest
+        image: cs548/rest
+        env:
+        - name: DATABASE_PASSWORD
+          value: dom1n1c
+        - name: MQ_PASSWORD
+          value: q1anyu
+        imagePullPolicy: Never
+      restartPolicy: Always

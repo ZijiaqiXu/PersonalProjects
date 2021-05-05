@@ -1,9 +1,0 @@
-edu\stevens\cs548\clinic\billing\jms\TreatmentListener.class
-edu\stevens\cs548\clinic\billing\service\ClinicBillingProducer.class
-edu\stevens\cs548\clinic\billing\domain\IBillingRecordDAO.class
-edu\stevens\cs548\clinic\billing\domain\BillingRecordFactory.class
-edu\stevens\cs548\clinic\billing\domain\IBillingRecordDAO$BillingRecordExn.class
-edu\stevens\cs548\clinic\billing\domain\BillingRecordDAO.class
-edu\stevens\cs548\clinic\billing\service\BillingDtoFactory.class
-edu\stevens\cs548\clinic\billing\domain\IBillingRecordFactory.class
-edu\stevens\cs548\clinic\billing\service\BillingService.class
